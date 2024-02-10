@@ -1,44 +1,61 @@
 
-# NBA Rookie Prediction Models
+# NBA Rookie Success Predictor Streamlit App
 
-This project focuses on predicting the success of NBA rookies based on their first-year performance metrics. Using a dataset containing various statistics for NBA rookies, we build and evaluate several machine learning models to predict which players are likely to have a successful career over five years.
+This repository contains a Streamlit app designed to predict the long-term success of NBA rookies based on their first-year statistics. The app allows users to upload a dataset, select a machine learning model for prediction, and interactively explore player data based on specific criteria.
 
-## Dataset Overview
+## Features
 
-The dataset includes various performance metrics for NBA rookies, such as points per game, assists, rebounds, and more. The target variable is `TARGET_5Yrs`, indicating whether the player had a successful career five years after their rookie season.
+- **Predictive Modeling:** Choose between Logistic Regression, Gaussian Naive Bayes, and Neural Network (MLP) models to predict whether NBA rookies will last at least 5 years in the league based on their performance metrics.
+- **Player Search:** Enter a player's name to get a prediction of their long-term success in the NBA.
+- **Criteria-Based Filtering:** Find players based on custom criteria such as minimum games played, points per game, and more.
 
-## Models Implemented
+## Installation
 
-- **Logistic Regression:** A basic classification algorithm used for binary outcomes.
-- **Gaussian Naive Bayes:** A simple probabilistic classifier based on applying Bayes' theorem.
-- **Neural Network (Multi-layer Perceptron):** A more complex model capable of capturing nonlinear relationships.
+To run this app locally, you'll need Python 3.6 or later. Follow these steps to get started:
 
-## Model Evaluation
+1. Clone this repository to your local machine:
+   ```bash
+   git clone https://github.com/2abet/nba-rookie-predictor.git
+   cd nba-rookie-predictor
+   ```
 
-We evaluate the models using accuracy, confusion matrices, and classification reports to understand their performance comprehensively.
+2. Install the required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Feature Selection and Scaling
+3. Run the Streamlit app:
+   ```bash
+   streamlit run app.py
+   ```
 
-Feature selection was performed to identify the most relevant features, and feature scaling was applied to normalize the data before feeding it into the models.
+Replace `app.py` with the path to your Streamlit script if it's named differently.
 
-## Principal Component Analysis (PCA)**
+## Usage
 
-PCA was applied to reduce the dimensionality of the data, improving the computational efficiency and potentially enhancing the model's performance by focusing on the most significant features.
+After launching the app, follow the on-screen instructions:
 
-## Getting Started
+1. **Upload Dataset:** Upload your NBA rookie dataset in CSV format. The dataset should include player statistics and a target variable indicating success.
+2. **Model Selection:** Use the sidebar to select the prediction model you want to use.
+3. **Explore:** Use the app's features to make predictions for specific players or filter the player dataset based on criteria you set.
 
-To run the models and evaluate their performance, ensure you have the necessary libraries installed:
+## Contributing
 
-```bash
-pip install numpy pandas matplotlib seaborn scikit-learn
-```
+Contributions to this project are welcome! Here are a few ways you can help:
 
-Then, you can clone this repository and run the Jupyter notebook to see the models in action.
+- Report bugs and request features by opening issues.
+- Contribute code: Fork the repository, make your changes, and submit a pull request.
 
-## Conclusion
-
-The models provide insights into the factors that contribute to an NBA rookie's long-term success and offer a framework for further exploration and analysis.
+Please refer to CONTRIBUTING.md for more details on making contributions.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Data sourced from Kaggle.
+
+## Contact
+
+For any queries, please open an issue.
