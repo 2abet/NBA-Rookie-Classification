@@ -11,13 +11,17 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.neural_network import MLPClassifier
 import numpy as np
 from sklearn.base import TransformerMixin
+from scipy.sparse import issparse
 
 # Define a transformer for converting sparse matrices to dense
 class DenseTransformer(TransformerMixin):
     def fit(self, X, y=None, **fit_params):
         return self
+
     def transform(self, X, y=None, **fit_params):
-        return X.toarray()
+        if issparse(X):
+            return X.toarray()
+        return X
 
 st.title('NBA Rookie Prediction App')
 
