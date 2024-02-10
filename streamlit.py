@@ -13,8 +13,8 @@ import numpy as np
 from sklearn.base import TransformerMixin
 from scipy.sparse import issparse
 
-# URL to the raw version of the file on GitHub
-file_url = "https://raw.githubusercontent.com/2abet/NBA-Rookie-Classification-App/main/nba_rookie_data.csv"
+# URL to the sample csv
+file_url = "https://drive.google.com/file/d/1fjwe0DT0qrpjPhTqCUjgiBw-YtO-GIxJ/view"
 
 # Create a link for users to download the CSV
 st.markdown(f"[Download Sample CSV]({file_url})", unsafe_allow_html=True)
