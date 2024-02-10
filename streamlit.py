@@ -13,6 +13,12 @@ import numpy as np
 from sklearn.base import TransformerMixin
 from scipy.sparse import issparse
 
+# URL to the raw version of the file on GitHub
+file_url = "https://raw.githubusercontent.com/2abet/NBA-Rookie-Classification-App/main/nba_rookie_data.csv"
+
+# Create a link for users to download the CSV
+st.markdown(f"[Download Sample CSV]({file_url})", unsafe_allow_html=True)
+
 # Define a transformer for converting sparse matrices to dense
 class DenseTransformer(TransformerMixin):
     def fit(self, X, y=None, **fit_params):
@@ -74,7 +80,7 @@ if data_file is not None:
     elif model_choice == "Logistic Regression":
         classifier = LogisticRegression()
     else:  # Neural Network (MLP)
-        classifier = MLPClassifier(hidden_layer_sizes=(50, 30), activation='relu', max_iter=1000, random_state=42)
+        classifier = MLPClassifier(hidden_layer_sizes=(100, 100, 50), activation='relu', max_iter=1000, random_state=42)
 
     clf = Pipeline(steps=[('preprocessor', preprocessor), 
                           ('classifier', classifier)])
