@@ -11,7 +11,7 @@ This repository contains a Streamlit app designed to predict the long-term succe
 
 ## Installation
 
-To use this online: Visit nbarookieapp.streamlit.app
+To use this online: Visit https://nbarookieapp.streamlit.app
 
 To run this app locally, you'll need Python 3.6 or later. Follow these steps to get started:
 
